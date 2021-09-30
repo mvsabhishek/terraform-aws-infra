@@ -7,7 +7,11 @@ resource "aws_dynamodb_table" "terraform-lock-db" {
     name = "LockID"
     type = "S"
   }
-  tags = {
-    "Name" = "DynamoDB Terraform State Lock Table"
-  }
+
+  tags = merge(
+    local.standard_tags,
+    {
+      "Name" = "DynamoDB Terraform State Lock Table"
+    }
+  )
 }
