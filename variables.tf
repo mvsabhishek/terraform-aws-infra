@@ -15,7 +15,7 @@ variable "aws_account_number" {
 variable "environment" {
   type        = string
   description = "Environment"
-  default     = "siva-proto"
+  default     = "proto"
 }
 
 variable "contact_email" {
@@ -34,4 +34,9 @@ variable "owner" {
   type        = string
   description = "Owner of the resource"
   default     = "Siva Munukutla"
+}
+
+variable "vpc_name" {
+  type        = string
+  description = "Name of the VPC"
 }

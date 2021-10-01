@@ -5,4 +5,5 @@ locals {
     createdBy     = var.createdBy
     owner         = var.owner
   }
+  region = var.aws_region
 }
